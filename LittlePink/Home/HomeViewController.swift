@@ -11,10 +11,12 @@ import XLPagerTabStrip
 class HomeViewController: ButtonBarPagerTabStripViewController {
 
     override func viewDidLoad() {
-        //selectedBar - the line below the button
+        //setting codes must write before viewDidLoad
+        //1. I set bar in storyboard
+        //2. selectedBar - the line below the button
         settings.style.selectedBarBackgroundColor = UIColor(named: "main")!
         settings.style.selectedBarHeight = 3
-        
+        //3. buttonBarItem - the button about text or image
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarItemTitleColor = .label
         settings.style.buttonBarItemLeftRightMargin = 0
@@ -23,6 +25,12 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+
+            oldCell?.label.textColor = UIColor(white: 1, alpha: 0.6)
+            newCell?.label.textColor = UIColor.white
+        }
     }
     
     

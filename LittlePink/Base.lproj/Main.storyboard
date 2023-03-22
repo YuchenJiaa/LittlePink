@@ -41,12 +41,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="AIg-ol-Ryq" firstAttribute="leading" secondItem="2Yb-ik-8eQ" secondAttribute="leading" id="23c-fp-10J"/>
+                            <constraint firstItem="AIg-ol-Ryq" firstAttribute="top" secondItem="pVz-er-fzh" secondAttribute="bottom" id="DSy-8P-ACC"/>
                             <constraint firstItem="2Yb-ik-8eQ" firstAttribute="trailing" secondItem="pVz-er-fzh" secondAttribute="trailing" id="JO3-xM-ZYq"/>
+                            <constraint firstItem="AIg-ol-Ryq" firstAttribute="trailing" secondItem="2Yb-ik-8eQ" secondAttribute="trailing" id="Ntu-6i-s2g"/>
                             <constraint firstItem="pVz-er-fzh" firstAttribute="top" secondItem="2Yb-ik-8eQ" secondAttribute="top" id="UZG-FV-qdV"/>
                             <constraint firstItem="AIg-ol-Ryq" firstAttribute="bottom" secondItem="2Yb-ik-8eQ" secondAttribute="bottom" id="ZAO-UY-vnW"/>
                             <constraint firstItem="AIg-ol-Ryq" firstAttribute="top" secondItem="pVz-er-fzh" secondAttribute="bottom" id="a5x-yh-M4i"/>
                             <constraint firstItem="AIg-ol-Ryq" firstAttribute="trailing" secondItem="2Yb-ik-8eQ" secondAttribute="trailing" id="kyL-gJ-Obo"/>
+                            <constraint firstItem="AIg-ol-Ryq" firstAttribute="leading" secondItem="2Yb-ik-8eQ" secondAttribute="leading" id="sjv-gL-zGn"/>
                             <constraint firstItem="pVz-er-fzh" firstAttribute="leading" secondItem="2Yb-ik-8eQ" secondAttribute="leading" id="tNB-G8-y2E"/>
+                            <constraint firstItem="AIg-ol-Ryq" firstAttribute="bottom" secondItem="2Yb-ik-8eQ" secondAttribute="bottom" id="wma-d8-8DJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="sNs-Ol-Eeg"/>
