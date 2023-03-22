@@ -18,8 +18,16 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
     //if return true, then will show a classic show, otherwise a customize show
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if let vc = viewController as? ShareVC{
+            
+            var config = YPImagePickerConfiguration()
+            // [Edit configuration here ...]
+            //MARK: General settings
+            config.isScrollToChangeModesEnabled = false
+            config.onlySquareImagesFromCamera = false
+            
+            // Build a picker with your configuration
+            let picker = YPImagePicker(configuration: config)
 
-            let picker = YPImagePicker()
             picker.didFinishPicking { [unowned picker] items, _ in
                 if let photo = items.singlePhoto {
                     print(photo.fromCamera) // Image source (camera or library)
