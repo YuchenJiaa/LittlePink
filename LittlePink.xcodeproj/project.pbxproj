@@ -13,6 +13,8 @@
 		0C3D1E9629C8CAC3008210DE /* LittlePink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D1E9429C8CAC3008210DE /* LittlePink.xcdatamodeld */; };
 		0C3D1E9829C8CAC4008210DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D1E9729C8CAC4008210DE /* Assets.xcassets */; };
 		0C3D1E9B29C8CAC4008210DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D1E9929C8CAC4008210DE /* LaunchScreen.storyboard */; };
+		0C6D536F29CBAE2300B64000 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D536E29CBAE2300B64000 /* TabBarC.swift */; };
+		0C6D537129CBB10F00B64000 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537029CBB10F00B64000 /* ShareVC.swift */; };
 		0C81C3AE29C9503300FC8DFA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3AD29C9503300FC8DFA /* HomeViewController.swift */; };
 		0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */; };
 		0C81C3B229C9558200FC8DFA /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */; };
@@ -32,6 +34,8 @@
 		0C3D1E9729C8CAC4008210DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3D1E9A29C8CAC4008210DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3D1E9C29C8CAC4008210DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C6D536E29CBAE2300B64000 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
+		0C6D537029CBB10F00B64000 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareVC.swift; path = /Users/jiajia/Desktop/LittlePinkProject/LittlePink/LittlePink/ShareVC.swift; sourceTree = "<absolute>"; };
 		0C81C3AD29C9503300FC8DFA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -80,10 +84,11 @@
 				0C3D1E8B29C8CAC3008210DE /* AppDelegate.swift */,
 				0C3D1E8D29C8CAC3008210DE /* SceneDelegate.swift */,
 				0C3D1E9129C8CAC3008210DE /* Main.storyboard */,
-				0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */,
-				0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */,
-				0C81C3B529C9571400FC8DFA /* Constants.swift */,
+				0C6D536E29CBAE2300B64000 /* TabBarC.swift */,
+				0C6D537029CBB10F00B64000 /* ShareVC.swift */,
 				0C81C3B729C95AD100FC8DFA /* Home */,
+				0C81C3BD29CB915A00FC8DFA /* Waterfall */,
+				0C81C3BE29CB916600FC8DFA /* Common */,
 				0C3D1E9729C8CAC4008210DE /* Assets.xcassets */,
 				0C3D1E9929C8CAC4008210DE /* LaunchScreen.storyboard */,
 				0C3D1E9C29C8CAC4008210DE /* Info.plist */,
@@ -101,6 +106,23 @@
 				0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		0C81C3BD29CB915A00FC8DFA /* Waterfall */ = {
+			isa = PBXGroup;
+			children = (
+				0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */,
+				0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */,
+			);
+			path = Waterfall;
+			sourceTree = "<group>";
+		};
+		0C81C3BE29CB916600FC8DFA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C81C3B529C9571400FC8DFA /* Constants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		380FCAA0DB9C7FAE5A1F45AE /* Pods */ = {
@@ -236,12 +258,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3D1E8C29C8CAC3008210DE /* AppDelegate.swift in Sources */,
+				0C6D536F29CBAE2300B64000 /* TabBarC.swift in Sources */,
 				0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */,
 				0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */,
 				0C3D1E8E29C8CAC3008210DE /* SceneDelegate.swift in Sources */,
 				0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */,
 				0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */,
 				0C81C3B229C9558200FC8DFA /* DiscoverViewController.swift in Sources */,
+				0C6D537129CBB10F00B64000 /* ShareVC.swift in Sources */,
 				0C3D1E9629C8CAC3008210DE /* LittlePink.xcdatamodeld in Sources */,
 				0C81C3AE29C9503300FC8DFA /* HomeViewController.swift in Sources */,
 				0C81C3B629C9571400FC8DFA /* Constants.swift in Sources */,
