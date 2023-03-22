@@ -7,25 +7,20 @@
 
 import UIKit
 import CHTCollectionViewWaterfallLayout
-
-private let reuseIdentifier = "Cell"
+import XLPagerTabStrip
 
 class WaterfallVC: UICollectionViewController {
  
-    
+    var channel = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let layout = collectionView.collectionViewLayout as! CHTCollectionViewWaterfallLayout
         layout.columnCount = 2
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        layout.minimumColumnSpacing = kWaterfallPadding
+        layout.minimumInteritemSpacing = kWaterfallPadding
+        layout.sectionInset = UIEdgeInsets(top: kWaterfallPadding, left: kWaterfallPadding, bottom: kWaterfallPadding, right: kWaterfallPadding)
     }
 
     /*
@@ -96,5 +91,11 @@ class WaterfallVC: UICollectionViewController {
 extension WaterfallVC: CHTCollectionViewDelegateWaterfallLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         UIImage(named: "\(indexPath.item + 1)")!.size
+    }
+}
+
+extension WaterfallVC: IndicatorInfoProvider{
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: channel)
     }
 }

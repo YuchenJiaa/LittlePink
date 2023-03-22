@@ -17,7 +17,13 @@ class DiscoverViewController: ButtonBarPagerTabStripViewController, IndicatorInf
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+        //let views loop
         var vcs: [UIViewController] = []
+        for channel in kChannels {
+            let vc = storyboard!.instantiateViewController(identifier: kWaterfallVCID) as! WaterfallVC
+            vc.channel = channel
+            vcs.append(vc)
+        }
         return vcs
     }
     
