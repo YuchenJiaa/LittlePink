@@ -18,6 +18,8 @@
 		0C81C3B229C9558200FC8DFA /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */; };
 		0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B329C955C100FC8DFA /* NearbyViewController.swift */; };
 		0C81C3B629C9571400FC8DFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B529C9571400FC8DFA /* Constants.swift */; };
+		0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */; };
+		0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */; };
 		38BF8F6AECE35F84943D13C2 /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC1DD61C45BA56BB5C66BD3 /* Pods_LittlePink.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		0C81C3B329C955C100FC8DFA /* NearbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		0C81C3B529C9571400FC8DFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
+		0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
 		1BDFE7F16C1AB8AB194E1B06 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
 		4DC1DD61C45BA56BB5C66BD3 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB380898BBBE241BA8E1F5F /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				0C3D1E8B29C8CAC3008210DE /* AppDelegate.swift */,
 				0C3D1E8D29C8CAC3008210DE /* SceneDelegate.swift */,
 				0C3D1E9129C8CAC3008210DE /* Main.storyboard */,
+				0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */,
+				0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */,
 				0C81C3B529C9571400FC8DFA /* Constants.swift */,
 				0C81C3B729C95AD100FC8DFA /* Home */,
 				0C3D1E9729C8CAC4008210DE /* Assets.xcassets */,
@@ -89,10 +95,10 @@
 		0C81C3B729C95AD100FC8DFA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0C81C3B329C955C100FC8DFA /* NearbyViewController.swift */,
-				0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */,
-				0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */,
 				0C81C3AD29C9503300FC8DFA /* HomeViewController.swift */,
+				0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */,
+				0C81C3B329C955C100FC8DFA /* NearbyViewController.swift */,
+				0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3D1E8C29C8CAC3008210DE /* AppDelegate.swift in Sources */,
+				0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */,
+				0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */,
 				0C3D1E8E29C8CAC3008210DE /* SceneDelegate.swift in Sources */,
 				0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */,
 				0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */,
@@ -395,7 +403,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,7 +434,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

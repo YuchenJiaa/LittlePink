@@ -32,6 +32,8 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = UIColor(white: 1, alpha: 0.6)
             newCell?.label.textColor = UIColor.white
         }
+    
+       
     }
     
     
@@ -41,7 +43,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         let nearbyVC = storyboard!.instantiateViewController(identifier: kNearbyVCID)
         let discoverVC = storyboard!.instantiateViewController(identifier: kDiscoverVCID)
         
-        return[followVC, nearbyVC, discoverVC]
+        return[discoverVC, followVC, nearbyVC]
     }
     /*
     // MARK: - Navigation
