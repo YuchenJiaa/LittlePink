@@ -11,9 +11,22 @@ import XLPagerTabStrip
 class DiscoverViewController: ButtonBarPagerTabStripViewController, IndicatorInfoProvider {
   
     override func viewDidLoad() {
+        
+        settings.style.selectedBarHeight = 0
+        //3. buttonBarItem - the button about text or image
+        settings.style.buttonBarItemBackgroundColor = .clear
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 16)
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        containerView.bounces = false
+        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+            guard changeCurrentIndex == true else { return }
+
+            oldCell?.label.textColor = .secondaryLabel
+            newCell?.label.textColor = .label
+        }
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

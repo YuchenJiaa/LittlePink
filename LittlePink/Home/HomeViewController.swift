@@ -18,8 +18,6 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         settings.style.selectedBarHeight = 3
         //3. buttonBarItem - the button about text or image
         settings.style.buttonBarItemBackgroundColor = .clear
-        settings.style.buttonBarItemTitleColor = .label
-        settings.style.buttonBarItemLeftRightMargin = 0
 
         
         super.viewDidLoad()
@@ -29,8 +27,8 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
 
-            oldCell?.label.textColor = UIColor(white: 1, alpha: 0.6)
-            newCell?.label.textColor = UIColor.white
+            oldCell?.label.textColor = .secondaryLabel
+            newCell?.label.textColor = .label
         }
     
        
