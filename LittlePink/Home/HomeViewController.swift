@@ -25,6 +25,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        containerView.bounces = false
         changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
 
