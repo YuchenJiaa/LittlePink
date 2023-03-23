@@ -81,11 +81,7 @@
 		0C3D1E8A29C8CAC2008210DE /* LittlePink */ = {
 			isa = PBXGroup;
 			children = (
-				0C3D1E8B29C8CAC3008210DE /* AppDelegate.swift */,
-				0C3D1E8D29C8CAC3008210DE /* SceneDelegate.swift */,
-				0C3D1E9129C8CAC3008210DE /* Main.storyboard */,
-				0C6D536E29CBAE2300B64000 /* TabBarC.swift */,
-				0C6D537029CBB10F00B64000 /* ShareVC.swift */,
+				0C6D537229CBF33D00B64000 /* LittlePink */,
 				0C81C3B729C95AD100FC8DFA /* Home */,
 				0C81C3BD29CB915A00FC8DFA /* Waterfall */,
 				0C81C3BE29CB916600FC8DFA /* Common */,
@@ -93,6 +89,18 @@
 				0C3D1E9929C8CAC4008210DE /* LaunchScreen.storyboard */,
 				0C3D1E9C29C8CAC4008210DE /* Info.plist */,
 				0C3D1E9429C8CAC3008210DE /* LittlePink.xcdatamodeld */,
+			);
+			path = LittlePink;
+			sourceTree = "<group>";
+		};
+		0C6D537229CBF33D00B64000 /* LittlePink */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D1E8B29C8CAC3008210DE /* AppDelegate.swift */,
+				0C3D1E8D29C8CAC3008210DE /* SceneDelegate.swift */,
+				0C3D1E9129C8CAC3008210DE /* Main.storyboard */,
+				0C6D536E29CBAE2300B64000 /* TabBarC.swift */,
+				0C6D537029CBB10F00B64000 /* ShareVC.swift */,
 			);
 			path = LittlePink;
 			sourceTree = "<group>";

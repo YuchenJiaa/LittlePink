@@ -24,7 +24,10 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             //MARK: General settings
             config.isScrollToChangeModesEnabled = false
             config.onlySquareImagesFromCamera = false
-            
+            config.albumName = "LittlePink"
+            config.startOnScreen = .library
+            config.screens = [.library, .video, .photo]
+            config.maxCameraZoomFactor = 5
             // Build a picker with your configuration
             let picker = YPImagePicker(configuration: config)
 
