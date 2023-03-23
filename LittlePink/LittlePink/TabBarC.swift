@@ -17,7 +17,9 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
     }
     //if return true, then will show a classic show, otherwise a customize show
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        if let vc = viewController as? ShareVC{
+        if viewController is ShareVC{
+            
+            
             
             var config = YPImagePickerConfiguration()
             // [Edit configuration here ...]
@@ -43,12 +45,10 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             // Build a picker with your configuration
             let picker = YPImagePicker(configuration: config)
 
-            picker.didFinishPicking { [unowned picker] items, _ in
-                if let photo = items.singlePhoto {
-                    print(photo.fromCamera) // Image source (camera or library)
-                    print(photo.image) // Final image selected by the user
-                    print(photo.originalImage) // original image selected by the user, unfiltered
-                }
+            picker.didFinishPicking { [unowned picker] items, cancelled in
+                    if cancelled{
+                       print("User tap cancel button")
+                    }
                 picker.dismiss(animated: true, completion: nil)
             }
             present(picker, animated: true, completion: nil)
