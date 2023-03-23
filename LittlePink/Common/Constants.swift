@@ -19,3 +19,4 @@ let kWaterfallCellID = "WaterfallCellID"
 let kWaterfallPadding: CGFloat = 4
 
 let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fitness","Food","Pet"]
+let kMaxPhotoCount = 9

@@ -28,6 +28,18 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.startOnScreen = .library
             config.screens = [.library, .video, .photo]
             config.maxCameraZoomFactor = 5
+            
+            //MARK: Library settings
+            config.library.mediaType = .photoAndVideo
+            config.library.defaultMultipleSelection = true
+            config.library.maxNumberOfItems = kMaxPhotoCount
+            config.library.numberOfItemsInRow = 4
+            config.library.preSelectItemOnMultipleSelection = false
+            
+            //MARK: Gallery settings
+            config.gallery.hidesRemoveButton = false
+            
+
             // Build a picker with your configuration
             let picker = YPImagePicker(configuration: config)
 
