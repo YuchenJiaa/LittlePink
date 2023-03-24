@@ -20,3 +20,15 @@ extension UIView{
         }
     }
 }
+
+extension UIViewController{
+    
+    //MARK: - To show a loading or alert dialog
+    func showTexHUD(_ title: String, _ subTitle: String? = nil){
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .text
+        hud.label.text = title
+        hud.detailsLabel.text = subTitle
+        hud.hide(animated: true, afterDelay: 2)
+    }
+}

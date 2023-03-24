@@ -7,6 +7,7 @@
 
 import UIKit
 import YPImagePicker
+import MBProgressHUD
 
 class NoteEditVC: UIViewController {
 
@@ -92,8 +93,7 @@ extension NoteEditVC{
             }
             present(picker, animated: true)
         }else{
-            print("You can not add anymore.")
-            
+            showTexHUD("Up to \(kMaxPhotoCount) photos can be selected")
         }
     }
 }
