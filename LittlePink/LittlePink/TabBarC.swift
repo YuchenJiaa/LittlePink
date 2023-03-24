@@ -32,7 +32,7 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.maxCameraZoomFactor = kMaxCameraZoomFactor
             
             //MARK: Library settings
-            config.library.mediaType = .photoAndVideo
+            config.library.mediaType = .photo
             config.library.defaultMultipleSelection = true
             config.library.maxNumberOfItems = kMaxPhotoCount
             config.library.preSelectItemOnMultipleSelection = false
@@ -48,9 +48,18 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
                     if cancelled{
                        print("User tap cancel button")
                     }
-                picker.dismiss(animated: true, completion: nil)
+                
+                for item in items{
+                    switch item {
+                    case let .photo(photo):
+                        print(photo)
+                    case .video(let video):
+                        print(video)
+                    }
+                }
+                picker.dismiss(animated: true)
             }
-            present(picker, animated: true, completion: nil)
+            present(picker, animated: true)
             
             return false
         }
