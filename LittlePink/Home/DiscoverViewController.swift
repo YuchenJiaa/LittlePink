@@ -15,7 +15,7 @@ class DiscoverViewController: ButtonBarPagerTabStripViewController, IndicatorInf
         settings.style.selectedBarHeight = 0
         //3. buttonBarItem - the button about text or image
         settings.style.buttonBarItemBackgroundColor = .clear
-        settings.style.buttonBarItemFont = .systemFont(ofSize: 16)
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 14)
         
         super.viewDidLoad()
 

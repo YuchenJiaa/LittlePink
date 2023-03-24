@@ -29,13 +29,12 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             config.albumName = "LittlePink"
             config.startOnScreen = .library
             config.screens = [.library, .video, .photo]
-            config.maxCameraZoomFactor = 5
+            config.maxCameraZoomFactor = kMaxCameraZoomFactor
             
             //MARK: Library settings
             config.library.mediaType = .photoAndVideo
             config.library.defaultMultipleSelection = true
             config.library.maxNumberOfItems = kMaxPhotoCount
-            config.library.numberOfItemsInRow = 4
             config.library.preSelectItemOnMultipleSelection = false
             
             //MARK: Gallery settings

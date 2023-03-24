@@ -15,6 +15,10 @@
 		0C3D1E9B29C8CAC4008210DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D1E9929C8CAC4008210DE /* LaunchScreen.storyboard */; };
 		0C6D536F29CBAE2300B64000 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D536E29CBAE2300B64000 /* TabBarC.swift */; };
 		0C6D537129CBB10F00B64000 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537029CBB10F00B64000 /* ShareVC.swift */; };
+		0C6D537429CCFF7E00B64000 /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537329CCFF7E00B64000 /* NoteEditVC.swift */; };
+		0C6D537629CD0A1600B64000 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537529CD0A1600B64000 /* PhotoCell.swift */; };
+		0C6D537A29CD32F600B64000 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537929CD32F600B64000 /* Extensions.swift */; };
+		0C6D537C29CD4F8800B64000 /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537B29CD4F8800B64000 /* PhotoFooter.swift */; };
 		0C81C3AE29C9503300FC8DFA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3AD29C9503300FC8DFA /* HomeViewController.swift */; };
 		0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */; };
 		0C81C3B229C9558200FC8DFA /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */; };
@@ -36,6 +40,10 @@
 		0C3D1E9C29C8CAC4008210DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C6D536E29CBAE2300B64000 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		0C6D537029CBB10F00B64000 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareVC.swift; path = /Users/jiajia/Desktop/LittlePinkProject/LittlePink/LittlePink/ShareVC.swift; sourceTree = "<absolute>"; };
+		0C6D537329CCFF7E00B64000 /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
+		0C6D537529CD0A1600B64000 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		0C6D537929CD32F600B64000 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C6D537B29CD4F8800B64000 /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
 		0C81C3AD29C9503300FC8DFA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0C81C3AF29C9556500FC8DFA /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		0C81C3B129C9558200FC8DFA /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
@@ -101,8 +109,19 @@
 				0C3D1E9129C8CAC3008210DE /* Main.storyboard */,
 				0C6D536E29CBAE2300B64000 /* TabBarC.swift */,
 				0C6D537029CBB10F00B64000 /* ShareVC.swift */,
+				0C6D537D29CD594D00B64000 /* NoteEdit */,
 			);
 			path = LittlePink;
+			sourceTree = "<group>";
+		};
+		0C6D537D29CD594D00B64000 /* NoteEdit */ = {
+			isa = PBXGroup;
+			children = (
+				0C6D537329CCFF7E00B64000 /* NoteEditVC.swift */,
+				0C6D537529CD0A1600B64000 /* PhotoCell.swift */,
+				0C6D537B29CD4F8800B64000 /* PhotoFooter.swift */,
+			);
+			path = NoteEdit;
 			sourceTree = "<group>";
 		};
 		0C81C3B729C95AD100FC8DFA /* Home */ = {
@@ -129,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				0C81C3B529C9571400FC8DFA /* Constants.swift */,
+				0C6D537929CD32F600B64000 /* Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -265,14 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C6D537629CD0A1600B64000 /* PhotoCell.swift in Sources */,
 				0C3D1E8C29C8CAC3008210DE /* AppDelegate.swift in Sources */,
 				0C6D536F29CBAE2300B64000 /* TabBarC.swift in Sources */,
 				0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */,
 				0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */,
+				0C6D537C29CD4F8800B64000 /* PhotoFooter.swift in Sources */,
 				0C3D1E8E29C8CAC3008210DE /* SceneDelegate.swift in Sources */,
 				0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */,
+				0C6D537429CCFF7E00B64000 /* NoteEditVC.swift in Sources */,
 				0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */,
 				0C81C3B229C9558200FC8DFA /* DiscoverViewController.swift in Sources */,
+				0C6D537A29CD32F600B64000 /* Extensions.swift in Sources */,
 				0C6D537129CBB10F00B64000 /* ShareVC.swift in Sources */,
 				0C3D1E9629C8CAC3008210DE /* LittlePink.xcdatamodeld in Sources */,
 				0C81C3AE29C9503300FC8DFA /* HomeViewController.swift in Sources */,

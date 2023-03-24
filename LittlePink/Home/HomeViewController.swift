@@ -18,7 +18,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         settings.style.selectedBarHeight = 3
         //3. buttonBarItem - the button about text or image
         settings.style.buttonBarItemBackgroundColor = .clear
-
+        settings.style.buttonBarItemFont = .systemFont(ofSize: 16)
         
         super.viewDidLoad()
 
