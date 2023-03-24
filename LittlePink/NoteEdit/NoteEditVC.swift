@@ -7,12 +7,12 @@
 
 import UIKit
 import YPImagePicker
-import MBProgressHUD
+import SKPhotoBrowser
 
 class NoteEditVC: UIViewController {
 
     var photos = [
-        UIImage(named: "1"), UIImage(named: "2")
+        UIImage(named: "1")!, UIImage(named: "2")!
     ]
     @IBOutlet weak var photoCollectionView: UICollectionView!
 
@@ -54,10 +54,31 @@ extension NoteEditVC: UICollectionViewDataSource{
 }
 
 extension NoteEditVC: UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 1. create SKPhoto Array from UIImage
+        var images: [SKPhoto] = []
+        
+        for photo in photos{
+            images.append(SKPhoto.photoWithImage(photo))
+        }
+        // 2. create PhotoBrowser Instance, and present from your viewController.
+        let browser = SKPhotoBrowser(photos: images, initialPageIndex: indexPath.item)
+        browser.delegate = self
+        SKPhotoBrowserOptions.displayAction = false
+        SKPhotoBrowserOptions.displayDeleteButton = true
+        present(browser, animated: true)
+    }
     
 }
-
-//MARK: Listening
+//MARK: - SKPhotoBrowserDelegate
+extension NoteEditVC: SKPhotoBrowserDelegate{
+    func removePhoto(_ browser: SKPhotoBrowser, index: Int, reload: @escaping (() -> Void)) {
+        photos.remove(at: index)
+        photoCollectionView.reloadData()
+        reload()
+    }
+}
+//MARK: - Listening
 extension NoteEditVC{
     @objc private func addPhoto(){
         if photoCount < kMaxPhotoCount{

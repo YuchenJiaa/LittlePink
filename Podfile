@@ -10,4 +10,5 @@ target 'LittlePink' do
     pod 'CHTCollectionViewWaterfallLayout/Swift'
     pod 'YPImagePicker'
     pod 'MBProgressHUD', '~> 1.2.0'
+    pod 'SKPhotoBrowser'
 end
