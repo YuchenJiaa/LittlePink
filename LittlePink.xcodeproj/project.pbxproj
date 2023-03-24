@@ -26,6 +26,7 @@
 		0C81C3B629C9571400FC8DFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B529C9571400FC8DFA /* Constants.swift */; };
 		0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */; };
 		0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */; };
+		0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */; };
 		38BF8F6AECE35F84943D13C2 /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DC1DD61C45BA56BB5C66BD3 /* Pods_LittlePink.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
 		0CE6EC2029CE040A0075A897 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
+		0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		1BDFE7F16C1AB8AB194E1B06 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
 		4DC1DD61C45BA56BB5C66BD3 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB380898BBBE241BA8E1F5F /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				0C3D1E9C29C8CAC4008210DE /* Info.plist */,
 				0C3D1E9429C8CAC3008210DE /* LittlePink.xcdatamodeld */,
 				0CE6EC2029CE040A0075A897 /* LittlePink-Bridging-Header.h */,
+				0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */,
 			);
 			path = LittlePink;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				0C3D1E9B29C8CAC4008210DE /* LaunchScreen.storyboard in Resources */,
 				0C3D1E9829C8CAC4008210DE /* Assets.xcassets in Resources */,
 				0C3D1E9329C8CAC3008210DE /* Main.storyboard in Resources */,
+				0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
