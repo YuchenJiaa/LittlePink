@@ -292,6 +292,8 @@
                                                 <connections>
                                                     <outlet property="dataSource" destination="42W-S3-Ddq" id="F1d-gu-nCc"/>
                                                     <outlet property="delegate" destination="42W-S3-Ddq" id="VTz-oh-gfU"/>
+                                                    <outlet property="dragDelegate" destination="42W-S3-Ddq" id="gMU-j0-rQy"/>
+                                                    <outlet property="dropDelegate" destination="42W-S3-Ddq" id="Vvp-UV-74x"/>
                                                 </connections>
                                             </collectionView>
                                         </subviews>

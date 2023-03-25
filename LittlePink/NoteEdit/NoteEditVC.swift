@@ -22,10 +22,11 @@ class NoteEditVC: UIViewController {
 
     var photoCount: Int{ photos.count }
     var isVideo: Bool{videoURL != nil}
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //turn on the drag interactive function
+        photoCollectionView.dragInteractionEnabled = true
         // Do any additional setup after loading the view.
     }
     
@@ -58,8 +59,10 @@ extension NoteEditVC: UICollectionViewDataSource{
     }
 }
 
+//MARK: - UICollectionViewDelegate
 extension NoteEditVC: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Preview video or photo.
         if isVideo{
             let playerVC = AVPlayerViewController()
             playerVC.player = AVPlayer(url: videoURL!)
