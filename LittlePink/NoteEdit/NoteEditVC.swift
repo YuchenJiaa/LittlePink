@@ -45,3 +45,9 @@ class NoteEditVC: UIViewController {
 
 }
 
+extension NoteEditVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

@@ -306,10 +306,11 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-ze-CTU">
                                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <action selector="TFEditBegin:" destination="42W-S3-Ddq" eventType="editingDidBegin" id="o5O-Tz-YKx"/>
                                                                             <action selector="TFEditEnd:" destination="42W-S3-Ddq" eventType="editingDidEnd" id="Tdg-hH-zvM"/>
+                                                                            <outlet property="delegate" destination="42W-S3-Ddq" id="lIU-9s-yJu"/>
                                                                         </connections>
                                                                     </textField>
                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-KY-bOM">
