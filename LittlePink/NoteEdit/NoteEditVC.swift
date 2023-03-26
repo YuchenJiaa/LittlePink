@@ -30,7 +30,7 @@ class NoteEditVC: UIViewController {
         super.viewDidLoad()
         //turn on the drag interactive function
         photoCollectionView.dragInteractionEnabled = true
-        // Do any additional setup after loading the view.
+        hideKeyboardWhenTappedAround()
     }
     
     @IBAction func TFEditBegin(_ sender: Any) {

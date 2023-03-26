@@ -31,4 +31,14 @@ extension UIViewController{
         hud.detailsLabel.text = subTitle
         hud.hide(animated: true, afterDelay: 2)
     }
+    
+    func hideKeyboardWhenTappedAround(){
+        let tap = UITapGestureRecognizer(target: self,action:#selector(dismissKeyboard))
+        //use this line of codes to let the new gesture not affect other touch
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
+    }
 }

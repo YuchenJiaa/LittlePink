@@ -292,6 +292,8 @@
                                                 <connections>
                                                     <outlet property="dataSource" destination="42W-S3-Ddq" id="F1d-gu-nCc"/>
                                                     <outlet property="delegate" destination="42W-S3-Ddq" id="VTz-oh-gfU"/>
+                                                    <outlet property="dragDelegate" destination="42W-S3-Ddq" id="Xhr-Cq-B96"/>
+                                                    <outlet property="dropDelegate" destination="42W-S3-Ddq" id="vo3-AZ-ujx"/>
                                                 </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fbt-K5-mM3">
