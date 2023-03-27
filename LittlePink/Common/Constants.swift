@@ -24,3 +24,5 @@ let kWaterfallPadding: CGFloat = 4
 let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fitness","Food","Pet"]
 let kMaxPhotoCount = 9
 let kMaxCameraZoomFactor: CGFloat = 5
+
+let kMaxNoteTitleCount = 20

@@ -42,12 +42,18 @@ class NoteEditVC: UIViewController {
         titleCountLabel.isHidden = true
     }
     
-
+    @IBAction func TFEndOnExit(_ sender: Any) {
+    }
+    
+    @IBAction func TFEditChanged(_ sender: Any) {
+        titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
+    }
+    
 }
 
 extension NoteEditVC: UITextFieldDelegate{
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
 }

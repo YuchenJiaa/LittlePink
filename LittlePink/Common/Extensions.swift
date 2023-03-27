@@ -8,6 +8,9 @@
 import UIKit
 
 
+extension UITextField{
+    var unwrappedText: String{text ?? ""}
+}
 //set a new attribute for the system in the storyboard
 extension UIView{
     @IBInspectable

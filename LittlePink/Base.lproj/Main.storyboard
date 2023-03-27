@@ -311,7 +311,10 @@
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <action selector="TFEditBegin:" destination="42W-S3-Ddq" eventType="editingDidBegin" id="o5O-Tz-YKx"/>
+                                                                            <action selector="TFEditChanged:" destination="42W-S3-Ddq" eventType="editingChanged" id="BnF-d9-d8i"/>
                                                                             <action selector="TFEditEnd:" destination="42W-S3-Ddq" eventType="editingDidEnd" id="Tdg-hH-zvM"/>
+                                                                            <action selector="TFEditEnd:" destination="42W-S3-Ddq" eventType="editingDidEndOnExit" id="jlm-xV-OXh"/>
+                                                                            <action selector="TFEndOnExit:" destination="42W-S3-Ddq" eventType="editingDidEndOnExit" id="0RU-7a-Ul4"/>
                                                                             <outlet property="delegate" destination="42W-S3-Ddq" id="lIU-9s-yJu"/>
                                                                         </connections>
                                                                     </textField>
