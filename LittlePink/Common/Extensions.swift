@@ -45,3 +45,12 @@ extension UIViewController{
         view.endEditing(true)
     }
 }
+
+extension Bundle{
+    static func loadView<T>(fromNib name: String, with type: T.Type) -> T{
+        if let view = Bundle.main.loadNibNamed(name, owner: nil, options: nil)?.first as? T{
+            return view
+        }
+        fatalError("Failed to load \(type) view")
+    }
+}

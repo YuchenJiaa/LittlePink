@@ -29,13 +29,11 @@ extension NoteEditVC{
             .foregroundColor: UIColor.secondaryLabel
         ]
         textView.typingAttributes = typingAttributes
-        
-        if let TextViewIAView = Bundle.main.loadNibNamed("TextViewIAView", owner: nil, options: nil)?.first as? TextViewIAView{
-            textView.inputAccessoryView = TextViewIAView
             
-            TextViewIAView.doneBtn.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
-            textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
-        }
+        //Soft keyboard - view
+        textView.inputAccessoryView = Bundle.loadView(fromNib: "TextViewIAView", with: TextViewIAView.self)
+        textViewIAView.doneBtn.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
+        textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
         
     }
 }
