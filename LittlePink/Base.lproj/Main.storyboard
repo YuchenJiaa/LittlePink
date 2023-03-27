@@ -297,17 +297,17 @@
                                                 </connections>
                                             </collectionView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fbt-K5-mM3">
-                                                <rect key="frame" x="16" y="122" width="382" height="190.5"/>
+                                                <rect key="frame" x="16" y="122" width="382" height="193"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3Gx-mb-Yho">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="35.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="38"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j41-rL-NDa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="18.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hiv-ze-CTU">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="18.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <connections>
                                                                             <action selector="TFEditBegin:" destination="42W-S3-Ddq" eventType="editingDidBegin" id="o5O-Tz-YKx"/>
@@ -319,7 +319,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohd-KY-bOM">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="18.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="16" height="21"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -327,7 +327,7 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIR-WQ-Q7W">
-                                                                <rect key="frame" x="0.0" y="34.5" width="382" height="1"/>
+                                                                <rect key="frame" x="0.0" y="37" width="382" height="1"/>
                                                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="1" id="HAc-ds-9Lq"/>
@@ -336,17 +336,22 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zOi-my-SoP">
-                                                        <rect key="frame" x="0.0" y="43.5" width="382" height="147"/>
+                                                        <rect key="frame" x="0.0" y="46" width="382" height="147"/>
                                                         <subviews>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="643-Nz-9rz">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="643-Nz-9rz" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="130"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="130" id="FeZ-uf-N9v"/>
                                                                 </constraints>
                                                                 <color key="textColor" systemColor="labelColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Please add content"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                        <color key="value" systemColor="placeholderTextColor"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </textView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvA-DX-GwN">
                                                                 <rect key="frame" x="0.0" y="146" width="382" height="1"/>
@@ -518,6 +523,9 @@
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="quaternaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17999999999999999" colorSpace="custom" customColorSpace="sRGB"/>

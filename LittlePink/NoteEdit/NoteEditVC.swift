@@ -28,14 +28,8 @@ class NoteEditVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //turn on the drag interactive function
-        photoCollectionView.dragInteractionEnabled = true
-        hideKeyboardWhenTappedAround()
-        titleCountLabel.text = "\(kMaxNoteTitleCount)"
-        //Remove text margins (top and bottom margins)
-        textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        //Remove content indentation (left and right margins)
-        textView.textContainer.lineFragmentPadding = 0
+        config()
+
     }
     
     @IBAction func TFEditBegin(_ sender: Any) {

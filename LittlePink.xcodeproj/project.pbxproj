@@ -26,6 +26,7 @@
 		0C81C3B629C9571400FC8DFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B529C9571400FC8DFA /* Constants.swift */; };
 		0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */; };
 		0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */; };
+		0CE344FA29D1529A004B0C71 /* NoteEdit-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */; };
 		0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */; };
 		0CE6EC2429CE539A0075A897 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */; };
 		0CE6EC2629CFA7BF0075A897 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2529CFA7BF0075A897 /* NoteEditVC-CollectionView.swift */; };
@@ -54,6 +55,7 @@
 		0C81C3B529C9571400FC8DFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
+		0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEdit-Config.swift"; sourceTree = "<group>"; };
 		0CE6EC2029CE040A0075A897 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				0C6D537329CCFF7E00B64000 /* NoteEditVC.swift */,
+				0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */,
 				0CE6EC2529CFA7BF0075A897 /* NoteEditVC-CollectionView.swift */,
 				0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */,
 				0C6D537529CD0A1600B64000 /* PhotoCell.swift */,
@@ -296,6 +299,7 @@
 				0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */,
 				0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */,
 				0C6D537C29CD4F8800B64000 /* PhotoFooter.swift in Sources */,
+				0CE344FA29D1529A004B0C71 /* NoteEdit-Config.swift in Sources */,
 				0C3D1E8E29C8CAC3008210DE /* SceneDelegate.swift in Sources */,
 				0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */,
 				0C6D537429CCFF7E00B64000 /* NoteEditVC.swift in Sources */,
