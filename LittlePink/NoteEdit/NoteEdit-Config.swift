@@ -14,8 +14,21 @@ extension NoteEditVC{
         hideKeyboardWhenTappedAround()
         titleCountLabel.text = "\(kMaxNoteTitleCount)"
         
+//        textView.isScrollEnabled = false
+//        textView.textContainer.lineBreakMode = .byWordWrapping
+        
         //Remove text and placeholder margins (top bottom left and right margins)
         let lineFragmentPadding = textView.textContainer.lineFragmentPadding
         textView.textContainerInset = UIEdgeInsets(top: 0, left: -lineFragmentPadding, bottom: 0, right: -lineFragmentPadding)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 6
+        let typingAttributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraphStyle,
+            .font: UIFont.systemFont(ofSize: 14),
+            .foregroundColor: UIColor.secondaryLabel
+        ]
+        textView.typingAttributes = typingAttributes
+        
     }
 }
