@@ -30,5 +30,18 @@ extension NoteEditVC{
         ]
         textView.typingAttributes = typingAttributes
         
+        if let TextViewIAView = Bundle.main.loadNibNamed("TextViewIAView", owner: nil, options: nil)?.first as? TextViewIAView{
+            textView.inputAccessoryView = TextViewIAView
+            
+            TextViewIAView.doneBtn.addTarget(self, action: #selector(resignTextView), for: .touchUpInside)
+            textViewIAView.maxTextCountLabel.text = "/\(kMaxNoteTextCount)"
+        }
+        
+    }
+}
+
+extension NoteEditVC{
+    @objc private func resignTextView(){
+        textView.resignFirstResponder()
     }
 }

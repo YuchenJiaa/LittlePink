@@ -355,6 +355,9 @@
                                                                         <color key="value" systemColor="placeholderTextColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="42W-S3-Ddq" id="0dx-N2-Cb9"/>
+                                                                </connections>
                                                             </textView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvA-DX-GwN">
                                                                 <rect key="frame" x="0.0" y="146" width="382" height="1"/>

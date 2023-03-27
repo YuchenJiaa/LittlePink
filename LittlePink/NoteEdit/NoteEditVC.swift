@@ -25,6 +25,9 @@ class NoteEditVC: UIViewController {
     
     var photoCount: Int{ photos.count }
     var isVideo: Bool{videoURL != nil}
+    var textViewIAView: TextViewIAView{
+        textView.inputAccessoryView as! TextViewIAView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,4 +71,11 @@ extension NoteEditVC: UITextFieldDelegate{
 //        textField.resignFirstResponder()
 //        return true
 //    }
+}
+
+extension NoteEditVC: UITextViewDelegate{
+    func textViewDidChange(_ textView: UITextView) {
+        guard textView.markedTextRange == nil else{return}
+        textViewIAView.currentTextCount = textView.text.count
+    }
 }

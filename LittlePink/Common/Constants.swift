@@ -26,3 +26,4 @@ let kMaxPhotoCount = 9
 let kMaxCameraZoomFactor: CGFloat = 5
 
 let kMaxNoteTitleCount = 50
+let kMaxNoteTextCount = 5

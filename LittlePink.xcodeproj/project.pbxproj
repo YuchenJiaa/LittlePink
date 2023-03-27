@@ -27,6 +27,8 @@
 		0C81C3BA29CB3D0F00FC8DFA /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */; };
 		0C81C3BC29CB449600FC8DFA /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */; };
 		0CE344FA29D1529A004B0C71 /* NoteEdit-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */; };
+		0CE344FE29D21A89004B0C71 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE344FD29D21A89004B0C71 /* TextViewIAView.swift */; };
+		0CE3450029D223C9004B0C71 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */; };
 		0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */; };
 		0CE6EC2429CE539A0075A897 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */; };
 		0CE6EC2629CFA7BF0075A897 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2529CFA7BF0075A897 /* NoteEditVC-CollectionView.swift */; };
@@ -56,6 +58,8 @@
 		0C81C3B929CB3D0F00FC8DFA /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		0C81C3BB29CB449600FC8DFA /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
 		0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEdit-Config.swift"; sourceTree = "<group>"; };
+		0CE344FD29D21A89004B0C71 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
+		0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		0CE6EC2029CE040A0075A897 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */,
 				0C6D537529CD0A1600B64000 /* PhotoCell.swift */,
 				0C6D537B29CD4F8800B64000 /* PhotoFooter.swift */,
+				0CE344FD29D21A89004B0C71 /* TextViewIAView.swift */,
+				0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3D1E9B29C8CAC4008210DE /* LaunchScreen.storyboard in Resources */,
+				0CE3450029D223C9004B0C71 /* TextViewIAView.xib in Resources */,
 				0C3D1E9829C8CAC4008210DE /* Assets.xcassets in Resources */,
 				0C3D1E9329C8CAC3008210DE /* Main.storyboard in Resources */,
 				0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */,
@@ -292,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE344FE29D21A89004B0C71 /* TextViewIAView.swift in Sources */,
 				0CE6EC2429CE539A0075A897 /* NoteEditVC-DragDrop.swift in Sources */,
 				0C6D537629CD0A1600B64000 /* PhotoCell.swift in Sources */,
 				0C3D1E8C29C8CAC3008210DE /* AppDelegate.swift in Sources */,
