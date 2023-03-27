@@ -54,10 +54,17 @@ class NoteEditVC: UIViewController {
 
 extension NoteEditVC: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if range.location >= kMaxNoteTitleCount{
-            return false
+        
+        //range.location -- The index of the first character of the current input or pasted text.
+        //string -- The current input of a specific character or pasted text
+        let isExceed = range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount
+        if isExceed{
+            showTexHUD("The title can be up to \(kMaxNoteTitleCount) characters maximum")
         }
-        return true
+//        if range.location >= kMaxNoteTitleCount || (textField.unwrappedText.count + string.count) > kMaxNoteTitleCount{
+//            return false
+//        }
+        return !isExceed
     }
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        textField.resignFirstResponder()
