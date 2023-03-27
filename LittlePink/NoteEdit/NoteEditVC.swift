@@ -31,6 +31,7 @@ class NoteEditVC: UIViewController {
         //turn on the drag interactive function
         photoCollectionView.dragInteractionEnabled = true
         hideKeyboardWhenTappedAround()
+        titleCountLabel.text = "\(kMaxNoteTitleCount)"
     }
     
     @IBAction func TFEditBegin(_ sender: Any) {
@@ -52,6 +53,12 @@ class NoteEditVC: UIViewController {
 }
 
 extension NoteEditVC: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if range.location >= kMaxNoteTitleCount{
+            return false
+        }
+        return true
+    }
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        textField.resignFirstResponder()
 //        return true

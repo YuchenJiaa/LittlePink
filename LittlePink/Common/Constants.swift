@@ -25,4 +25,4 @@ let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fit
 let kMaxPhotoCount = 9
 let kMaxCameraZoomFactor: CGFloat = 5
 
-let kMaxNoteTitleCount = 20
+let kMaxNoteTitleCount = 2
