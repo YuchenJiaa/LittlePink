@@ -32,6 +32,10 @@ class NoteEditVC: UIViewController {
         photoCollectionView.dragInteractionEnabled = true
         hideKeyboardWhenTappedAround()
         titleCountLabel.text = "\(kMaxNoteTitleCount)"
+        //Remove text margins (top and bottom margins)
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        //Remove content indentation (left and right margins)
+        textView.textContainer.lineFragmentPadding = 0
     }
     
     @IBAction func TFEditBegin(_ sender: Any) {
