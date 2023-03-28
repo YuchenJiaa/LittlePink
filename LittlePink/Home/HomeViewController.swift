@@ -14,7 +14,7 @@ class HomeViewController: ButtonBarPagerTabStripViewController {
         //setting codes must write before viewDidLoad
         //1. I set bar in storyboard
         //2. selectedBar - the line below the button
-        settings.style.selectedBarBackgroundColor = UIColor(named: "main")!
+        settings.style.selectedBarBackgroundColor = mainColor
         settings.style.selectedBarHeight = 3
         //3. buttonBarItem - the button about text or image
         settings.style.buttonBarItemBackgroundColor = .clear

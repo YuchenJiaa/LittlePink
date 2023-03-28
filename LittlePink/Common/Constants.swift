@@ -15,12 +15,16 @@ let kWaterfallVCID = "WaterfallVCID"
 let kNoteEditVCID = "NoteEditVCID"
 let kPhotoCellID = "PhotoCellID"
 let kPhotoFooterID = "PhotoFooterID"
+let kChannelTableVCID = "ChannelTableVCID"
+let kSubChannelCellID = "SubChannelCellID"
+
+//MARK: - Accets
+let mainColor = UIColor(named: "main")!
+
 
 //MARK: CellID
 let kWaterfallCellID = "WaterfallCellID"
-
 let kWaterfallPadding: CGFloat = 4
-
 let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fitness","Food","Pet"]
 
 //YPImagePicker
@@ -32,7 +36,7 @@ let kMaxNoteTitleCount = 50
 let kMaxNoteTextCount = 2000
 
 //Topic
-let kSubchannels = [
+let kAllSubChannels = [
     ["Fashion and beauty","Food and cooking","Travel and tourism","Lifestyle and inspiration"],
     ["Solo traveling","Top travel destinations","Best beaches"],
     ["Celebrity gossip and news","Movie and TV show reviews","Music news and reviews"],

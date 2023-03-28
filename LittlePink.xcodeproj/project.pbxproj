@@ -29,6 +29,8 @@
 		0CE344FA29D1529A004B0C71 /* NoteEdit-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */; };
 		0CE344FE29D21A89004B0C71 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE344FD29D21A89004B0C71 /* TextViewIAView.swift */; };
 		0CE3450029D223C9004B0C71 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */; };
+		0CE3450229D26B80004B0C71 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3450129D26B80004B0C71 /* ChannelVC.swift */; };
+		0CE3450429D26D5A004B0C71 /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3450329D26D5A004B0C71 /* ChannelTableVC.swift */; };
 		0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */; };
 		0CE6EC2429CE539A0075A897 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */; };
 		0CE6EC2629CFA7BF0075A897 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2529CFA7BF0075A897 /* NoteEditVC-CollectionView.swift */; };
@@ -60,6 +62,8 @@
 		0CE344F929D1529A004B0C71 /* NoteEdit-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEdit-Config.swift"; sourceTree = "<group>"; };
 		0CE344FD29D21A89004B0C71 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
+		0CE3450129D26B80004B0C71 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		0CE3450329D26D5A004B0C71 /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		0CE6EC2029CE040A0075A897 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				0C6D537B29CD4F8800B64000 /* PhotoFooter.swift */,
 				0CE344FD29D21A89004B0C71 /* TextViewIAView.swift */,
 				0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */,
+				0CE3450129D26B80004B0C71 /* ChannelVC.swift */,
+				0CE3450329D26D5A004B0C71 /* ChannelTableVC.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -312,11 +318,13 @@
 				0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */,
 				0C6D537429CCFF7E00B64000 /* NoteEditVC.swift in Sources */,
 				0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */,
+				0CE3450229D26B80004B0C71 /* ChannelVC.swift in Sources */,
 				0CE6EC2629CFA7BF0075A897 /* NoteEditVC-CollectionView.swift in Sources */,
 				0C81C3B229C9558200FC8DFA /* DiscoverViewController.swift in Sources */,
 				0C6D537A29CD32F600B64000 /* Extensions.swift in Sources */,
 				0C6D537129CBB10F00B64000 /* ShareVC.swift in Sources */,
 				0C3D1E9629C8CAC3008210DE /* LittlePink.xcdatamodeld in Sources */,
+				0CE3450429D26D5A004B0C71 /* ChannelTableVC.swift in Sources */,
 				0C81C3AE29C9503300FC8DFA /* HomeViewController.swift in Sources */,
 				0C81C3B629C9571400FC8DFA /* Constants.swift in Sources */,
 			);
