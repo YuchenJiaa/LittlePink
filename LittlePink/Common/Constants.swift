@@ -20,6 +20,7 @@ let kSubChannelCellID = "SubChannelCellID"
 
 //MARK: - Accets
 let mainColor = UIColor(named: "main")!
+let blueColor = UIColor(named: "blue")!
 
 
 //MARK: CellID

@@ -31,6 +31,7 @@
 		0CE3450029D223C9004B0C71 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */; };
 		0CE3450229D26B80004B0C71 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3450129D26B80004B0C71 /* ChannelVC.swift */; };
 		0CE3450429D26D5A004B0C71 /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3450329D26D5A004B0C71 /* ChannelTableVC.swift */; };
+		0CE3450629D351AE004B0C71 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE3450529D351AE004B0C71 /* Protocols.swift */; };
 		0CE6EC2229CE4FDA0075A897 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */; };
 		0CE6EC2429CE539A0075A897 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */; };
 		0CE6EC2629CFA7BF0075A897 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6EC2529CFA7BF0075A897 /* NoteEditVC-CollectionView.swift */; };
@@ -64,6 +65,7 @@
 		0CE344FF29D223C9004B0C71 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		0CE3450129D26B80004B0C71 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		0CE3450329D26D5A004B0C71 /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
+		0CE3450529D351AE004B0C71 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		0CE6EC2029CE040A0075A897 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		0CE6EC2129CE4EC70075A897 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		0CE6EC2329CE539A0075A897 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				0C81C3B529C9571400FC8DFA /* Constants.swift */,
 				0C6D537929CD32F600B64000 /* Extensions.swift */,
+				0CE3450529D351AE004B0C71 /* Protocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE344FE29D21A89004B0C71 /* TextViewIAView.swift in Sources */,
+				0CE3450629D351AE004B0C71 /* Protocols.swift in Sources */,
 				0CE6EC2429CE539A0075A897 /* NoteEditVC-DragDrop.swift in Sources */,
 				0C6D537629CD0A1600B64000 /* PhotoCell.swift in Sources */,
 				0C3D1E8C29C8CAC3008210DE /* AppDelegate.swift in Sources */,

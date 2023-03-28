@@ -38,6 +38,17 @@ class ChannelTableVC: UITableViewController {
         cell.textLabel?.font = .systemFont(ofSize: 15)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let channelVC = parent as! ChannelVC
+        channelVC.PVDelegate?.updateChannel(channel: channel, subChannel: subChannels[indexPath.row])
+        
+        //print(presentingViewController)
+        //Based on the present and dismiss mechanism, the presentingViewController of the child view controller is the same as the parent view controller (in this case, NoteEditVC)
+        //So using dismiss here is equivalent to using dismiss directly in the parent view controller
+        dismiss(animated: true)
+    }
 
 
 }
