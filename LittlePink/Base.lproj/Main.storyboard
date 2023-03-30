@@ -463,7 +463,7 @@
                                                                             <constraint firstAttribute="height" constant="60" id="zRC-cb-dsQ"/>
                                                                         </constraints>
                                                                         <connections>
-                                                                            <outletCollection property="gestureRecognizers" destination="TOG-nV-tH6" appends="YES" id="HOD-GU-mxf"/>
+                                                                            <outletCollection property="gestureRecognizers" destination="TOG-nV-tH6" appends="YES" id="ajd-rF-SZ9"/>
                                                                         </connections>
                                                                     </stackView>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7bD-q2-gmV">
@@ -505,13 +505,52 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="bZR-kX-rFj"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ShT-RJ-So0"/>
                             </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8Lx-DV-76q">
+                                <rect key="frame" x="16" y="818" width="382" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJx-jQ-xQ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="44"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Save draft">
+                                            <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveDraftNote:" destination="42W-S3-Ddq" eventType="touchUpInside" id="2La-Vr-vPw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evY-js-kA4">
+                                        <rect key="frame" x="106" y="0.0" width="276" height="44"/>
+                                        <color key="backgroundColor" name="main"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="SHARE A NOTE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="ShareNote:" destination="42W-S3-Ddq" eventType="touchUpInside" id="mOz-bX-PvU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="x5L-NX-3SX"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EJC-GU-nZE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VrF-G0-BM8" secondAttribute="bottom" id="0Tz-A6-pps"/>
                             <constraint firstItem="VrF-G0-BM8" firstAttribute="top" secondItem="EJC-GU-nZE" secondAttribute="top" id="1V7-fr-GBi"/>
+                            <constraint firstItem="EJC-GU-nZE" firstAttribute="bottom" secondItem="8Lx-DV-76q" secondAttribute="bottom" id="YzN-oT-onI"/>
+                            <constraint firstItem="8Lx-DV-76q" firstAttribute="leading" secondItem="EJC-GU-nZE" secondAttribute="leading" constant="16" id="ZHs-5J-Mfo"/>
                             <constraint firstItem="VrF-G0-BM8" firstAttribute="trailing" secondItem="EJC-GU-nZE" secondAttribute="trailing" id="axO-9d-Rq9"/>
+                            <constraint firstItem="EJC-GU-nZE" firstAttribute="trailing" secondItem="8Lx-DV-76q" secondAttribute="trailing" constant="16" id="heI-DX-cUM"/>
                             <constraint firstItem="VrF-G0-BM8" firstAttribute="leading" secondItem="EJC-GU-nZE" secondAttribute="leading" id="uWW-Ar-sRo"/>
                         </constraints>
                     </view>
@@ -531,11 +570,7 @@
                         <segue destination="YML-Qa-iDy" kind="presentation" id="HdA-88-fjD"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="TOG-nV-tH6">
-                    <connections>
-                        <segue destination="sYz-WC-mSW" kind="presentation" modalPresentationStyle="fullScreen" id="OcT-9b-abE"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TOG-nV-tH6"/>
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="561.83035714285711"/>
         </scene>
@@ -588,75 +623,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5c-uE-SsG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2611.594202898551" y="561.83035714285711"/>
-        </scene>
-        <!--POIVC-->
-        <scene sceneID="Z1y-hV-gIq">
-            <objects>
-                <viewController id="sYz-WC-mSW" customClass="POIVC" customModule="LittlePink" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kwj-z0-zWR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search location" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ee-ot-aEL">
-                                <rect key="frame" x="16" y="52" width="382" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="9LP-16-Uec"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <view contentMode="scaleToFill" id="DyU-Na-WDX">
-                                <rect key="frame" x="0.0" y="447" width="414" height="1"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="S5K-el-t0g"/>
-                                </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="w9U-dD-deY">
-                                <rect key="frame" x="0.0" y="103" width="414" height="793"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="TKf-Vd-cbO">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="1" id="axc-Ia-Rua"/>
-                                    </constraints>
-                                </view>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gvx-ze-dGF">
-                                        <rect key="frame" x="0.0" y="45.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gvx-ze-dGF" id="lje-Sq-akP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="sYz-WC-mSW" id="BPl-Gf-5fr"/>
-                                    <outlet property="delegate" destination="sYz-WC-mSW" id="1pf-QM-O5E"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="2Ro-z6-JqS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="w9U-dD-deY" secondAttribute="bottom" id="3Km-GN-6MR"/>
-                            <constraint firstItem="w9U-dD-deY" firstAttribute="top" secondItem="5ee-ot-aEL" secondAttribute="bottom" constant="16" id="BAV-63-s7v"/>
-                            <constraint firstItem="5ee-ot-aEL" firstAttribute="trailing" secondItem="2Ro-z6-JqS" secondAttribute="trailing" constant="-16" id="OYe-kj-gQl"/>
-                            <constraint firstItem="2Ro-z6-JqS" firstAttribute="trailing" secondItem="w9U-dD-deY" secondAttribute="trailing" id="Pg5-cL-Oyq"/>
-                            <constraint firstItem="w9U-dD-deY" firstAttribute="top" secondItem="5ee-ot-aEL" secondAttribute="bottom" id="XdQ-Ec-PpC"/>
-                            <constraint firstItem="5ee-ot-aEL" firstAttribute="top" secondItem="2Ro-z6-JqS" secondAttribute="top" constant="8" id="Xtt-7G-4CC"/>
-                            <constraint firstItem="DyU-Na-WDX" firstAttribute="top" secondItem="5ee-ot-aEL" secondAttribute="bottom" constant="16" id="eO7-S1-H5P"/>
-                            <constraint firstItem="5ee-ot-aEL" firstAttribute="leading" secondItem="2Ro-z6-JqS" secondAttribute="leading" constant="16" id="gsq-VO-s4d"/>
-                            <constraint firstItem="w9U-dD-deY" firstAttribute="leading" secondItem="2Ro-z6-JqS" secondAttribute="leading" id="vqB-7F-sUA"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bYp-L4-2VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2611" y="1221"/>
         </scene>
         <!--Channel TableVC-->
         <scene sceneID="z7w-rC-h5D">

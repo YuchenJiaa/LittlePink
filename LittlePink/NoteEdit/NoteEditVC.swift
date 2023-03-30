@@ -9,7 +9,7 @@ import UIKit
 
 
 class NoteEditVC: UIViewController {
-
+    
     var photos = [
         UIImage(named: "1")!, UIImage(named: "2")!
     ]
@@ -29,16 +29,18 @@ class NoteEditVC: UIViewController {
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var channelPlaceholderLabel: UILabel!
     
+    
     var photoCount: Int{ photos.count }
     var isVideo: Bool{videoURL != nil}
     var textViewIAView: TextViewIAView{
         textView.inputAccessoryView as! TextViewIAView
     }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
-
+        
     }
     
     @IBAction func TFEditBegin(_ sender: Any) {
@@ -54,15 +56,48 @@ class NoteEditVC: UIViewController {
     }
     
     @IBAction func TFEditChanged(_ sender: Any) {
+        if titleTextField.unwrappedText.count > kMaxNoteTitleCount{
+            
+            titleTextField.text = String(titleTextField.unwrappedText.prefix(kMaxNoteTitleCount))
+            
+            showTexHUD("Up to \(kMaxNoteTitleCount) characters are allowed")
+            
+            DispatchQueue.main.async {
+                let end = self.titleTextField.endOfDocument
+                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
+            }
+        }
         titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
+    }
+    //using coreDate save data
+    @IBAction func saveDraftNote(_ sender: Any) {
+        guard textViewIAView.currentTextCount <= kMaxNoteTextCount else{
+            showTexHUD("Up to \(kMaxNoteTextCount) characters are allowed")
+            return
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let draftNote = DraftNote(context: context)
+        draftNote.coverPhoto = photos[0].pngData()
+        draftNote.title = titleTextField.exactText
+        draftNote.text = textView.exactText
+        draftNote.channel = channel
+        draftNote.subChannel = subChannel
+        draftNote.updatedAt = Date()
+        
+        appDelegate.saveContext()
+    }
+    
+    @IBAction func ShareNote(_ sender: Any) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        view.endEditing(true)
         if let channelVC = segue.destination as? ChannelVC{
             channelVC.PVDelegate = self
         }
     }
-    
 }
 
 extension NoteEditVC: UITextFieldDelegate{
@@ -106,3 +141,6 @@ extension NoteEditVC: ChannelVCDelegate{
         
     }
 }
+
+
+

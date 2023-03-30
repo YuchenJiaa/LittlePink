@@ -13,6 +13,7 @@ extension NoteEditVC{
         photoCollectionView.dragInteractionEnabled = true
         hideKeyboardWhenTappedAround()
         titleCountLabel.text = "\(kMaxNoteTitleCount)"
+        print(NSHomeDirectory())
         
 //        textView.isScrollEnabled = false
 //        textView.textContainer.lineBreakMode = .byWordWrapping
