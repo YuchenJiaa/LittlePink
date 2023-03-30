@@ -79,7 +79,19 @@ class NoteEditVC: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         
         let draftNote = DraftNote(context: context)
-        draftNote.coverPhoto = photos[0].pngData()
+        if isVideo{
+            draftNote.video = try? Data(contentsOf: videoURL!)
+        }
+//        draftNote.coverPhoto = photos[0].jpeg(.high)
+//        //Encoder不能对UIImage编码，所以要先循环，把每个都变成Data类型再append进一个新数组，对这个新数组进行编码
+//        var photos: [Data] = []
+//        for photo in self.photos{
+//            if let pngData = photo.pngData(){
+//                photos.append(pngData)
+//            }
+//        }
+//        draftNote.photos = try? JSONEncoder().encode(photos)
+        
         draftNote.title = titleTextField.exactText
         draftNote.text = textView.exactText
         draftNote.channel = channel

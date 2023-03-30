@@ -15,6 +15,21 @@ extension Optional where Wrapped == String{
     var unwrappedText: String{self ?? ""}
 }
 
+extension UIImage{
+    
+    enum JPEGQuality: CGFloat {
+        case lowest  = 0
+        case low     = 0.25
+        case medium  = 0.5
+        case high    = 0.75
+        case highest = 1
+    }
+    
+    func jpeg(_ jpegQuality: JPEGQuality) -> Data?{
+        jpegData(compressionQuality: jpegQuality.rawValue)
+    }
+}
+
 extension UITextField{
     var unwrappedText: String{text ?? ""}
     var exactText:String{
