@@ -9,7 +9,13 @@ import CoreData
 
 extension WaterfallVC{
     func getDraftNotes(){
-        let draftNotes = try! context.fetch(DraftNote.fetchRequest() as NSFetchRequest<DraftNote>)
+        let request = DraftNote.fetchRequest() as NSFetchRequest<DraftNote>
+        //sort
+        let sortDescriptor = NSSortDescriptor(key: "updatedAt", ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+        //To improve the perfomance
+        request.propertiesToFetch = ["coverPhoto", "title", "updatedAt", "isVideo"]
+        let draftNotes = try! context.fetch(request)
         self.draftNotes = draftNotes
     }
 }
