@@ -7,7 +7,7 @@
 
 import UIKit
 
-//MARK: StoryboardID
+//MARK: - StoryboardID
 let kFollowVCID = "FollowViewControllerID"
 let kNearbyVCID = "NearbyViewControllerID"
 let kDiscoverVCID = "DiscoverViewControllerID"
@@ -22,7 +22,11 @@ let mainColor = UIColor(named: "main")!
 let blueColor = UIColor(named: "blue")!
 let imagePH = UIImage(named: "imagePH")!
 
-//MARK: CellID
+//MARK: - coreDAta
+let appDelegate = UIApplication.shared.delegate as! AppDelegate
+let context = appDelegate.persistentContainer.viewContext
+
+//MARK: - CellID
 let kWaterfallCellID = "WaterfallCellID"
 let kPhotoCellID = "PhotoCellID"
 let kSubChannelCellID = "SubChannelCellID"
@@ -32,15 +36,15 @@ let kdraftNoteWaterfallCellID = "DraftNoteWaterfallCellID"
 let kWaterfallPadding: CGFloat = 4
 let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fitness","Food","Pet"]
 
-//YPImagePicker
+//MARK: - YPImagePicker
 let kMaxPhotoCount = 9
 let kMaxCameraZoomFactor: CGFloat = 5
 
-//Note
+//MARK: - Note
 let kMaxNoteTitleCount = 50
 let kMaxNoteTextCount = 2000
 
-//Topic
+//MARK: - Topic
 let kAllSubChannels = [
     ["Fashion and beauty","Food and cooking","Travel and tourism","Lifestyle and inspiration"],
     ["Solo traveling","Top travel destinations","Best beaches"],

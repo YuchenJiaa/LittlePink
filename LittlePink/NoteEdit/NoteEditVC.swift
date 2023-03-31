@@ -75,8 +75,6 @@ class NoteEditVC: UIViewController {
             showTexHUD("Up to \(kMaxNoteTextCount) characters are allowed")
             return
         }
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
         
         let draftNote = DraftNote(context: context)
         if isVideo{
