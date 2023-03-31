@@ -1,5 +1,6 @@
 PODS:
   - CHTCollectionViewWaterfallLayout/Swift (0.9.10)
+  - DateToolsSwift (5.0.0)
   - GoogleMaps (7.4.0):
     - GoogleMaps/Maps (= 7.4.0)
   - GoogleMaps/Base (7.4.0)
@@ -18,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - CHTCollectionViewWaterfallLayout/Swift
+  - DateToolsSwift
   - GoogleMaps (= 7.4.0)
   - GooglePlaces (= 7.4.0)
   - KMPlaceholderTextView (~> 1.4.0)
@@ -29,6 +31,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CHTCollectionViewWaterfallLayout
+    - DateToolsSwift
     - GoogleMaps
     - GooglePlaces
     - KMPlaceholderTextView
@@ -41,6 +44,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   CHTCollectionViewWaterfallLayout: b989a459788d7657ac010e03bc0f7eedca95a420
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   GoogleMaps: 032f676450ba0779bd8ce16840690915f84e57ac
   GooglePlaces: 544e908d94860bf6f8fc1865b80d2c7eb6b5f937
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
@@ -51,6 +55,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 0d82bda7be8cb24db9e2e6ae42a1a1ae7759382b
+PODFILE CHECKSUM: 9ed9105119c87a6df600ce652a9334f9ab143da3
 
 COCOAPODS: 1.12.0

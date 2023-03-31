@@ -126,14 +126,14 @@
                         <collectionViewLayout key="collectionViewLayout" id="UaL-m7-4nA" customClass="CHTCollectionViewWaterfallLayout" customModule="CHTCollectionViewWaterfallLayout"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterfallCellID" id="mMh-Gr-NrO" customClass="WaterfallCell" customModule="LittlePink" customModuleProvider="target">
-                                <rect key="frame" x="67.5" y="0.0" width="279" height="204"/>
+                                <rect key="frame" x="135" y="0.0" width="144" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Ra-eh-0ny">
-                                    <rect key="frame" x="0.0" y="0.0" width="279" height="204"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="135"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KZR-V8-ovc">
-                                            <rect key="frame" x="0.0" y="0.0" width="279" height="204"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZR-V8-ovc">
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="196"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -143,9 +143,85 @@
                                         <constraint firstAttribute="trailing" secondItem="KZR-V8-ovc" secondAttribute="trailing" id="tDg-Ff-hTz"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="279" height="204"/>
+                                <size key="customSize" width="144" height="135"/>
                                 <connections>
                                     <outlet property="imageView" destination="KZR-V8-ovc" id="Hby-ov-Snq"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DraftNoteWaterfallCellID" id="Uqd-4W-iJJ" customClass="DraftNoteWaterfallCell" customModule="LittlePink" customModuleProvider="target">
+                                <rect key="frame" x="44" y="145" width="326" height="534"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3Db-Dg-SPK">
+                                    <rect key="frame" x="0.0" y="0.0" width="326" height="534"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-Wm-j1r">
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="438.5"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-bP-QBB">
+                                            <rect key="frame" x="16" y="454.5" width="294" height="63.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDr-l6-tfD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="294" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-DO-bjf">
+                                                    <rect key="frame" x="0.0" y="32.5" width="294" height="31"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08-08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79N-BP-kZH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="49" height="31"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SX-RA-tWG">
+                                                            <rect key="frame" x="257.5" y="0.0" width="36.5" height="31"/>
+                                                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain">
+                                                                <imageReference key="image" image="trash" catalog="system" symbolScale="small"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="OZu-qM-zqU">
+                                            <rect key="frame" x="286" y="16.5" width="24" height="23"/>
+                                            <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="Zb5-p0-HwW"/>
+                                                <constraint firstAttribute="width" constant="24" id="fYV-7N-89p"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HTy-bP-QBB" firstAttribute="top" secondItem="Wsf-Wm-j1r" secondAttribute="bottom" constant="16" id="9dE-TO-a21"/>
+                                        <constraint firstAttribute="trailing" secondItem="HTy-bP-QBB" secondAttribute="trailing" constant="16" id="Fbv-We-CHN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Wsf-Wm-j1r" secondAttribute="trailing" id="K5Y-iZ-E9J"/>
+                                        <constraint firstItem="OZu-qM-zqU" firstAttribute="top" secondItem="3Db-Dg-SPK" secondAttribute="top" constant="16" id="YUT-Ih-gMj"/>
+                                        <constraint firstItem="Wsf-Wm-j1r" firstAttribute="leading" secondItem="3Db-Dg-SPK" secondAttribute="leading" id="Z45-yK-sbm"/>
+                                        <constraint firstAttribute="bottom" secondItem="HTy-bP-QBB" secondAttribute="bottom" constant="16" id="c0J-1x-w0P"/>
+                                        <constraint firstItem="Wsf-Wm-j1r" firstAttribute="top" secondItem="3Db-Dg-SPK" secondAttribute="top" id="j9U-m6-5RZ"/>
+                                        <constraint firstItem="HTy-bP-QBB" firstAttribute="leading" secondItem="3Db-Dg-SPK" secondAttribute="leading" constant="16" id="pn3-nH-Ogm"/>
+                                        <constraint firstAttribute="trailing" secondItem="OZu-qM-zqU" secondAttribute="trailing" constant="16" id="wHs-dP-eUj"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="326" height="534"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dateLabel" destination="79N-BP-kZH" id="aJO-PN-1ET"/>
+                                    <outlet property="deleteBtn" destination="0SX-RA-tWG" id="32T-pa-ct9"/>
+                                    <outlet property="imageView" destination="Wsf-Wm-j1r" id="Fp4-Pq-p09"/>
+                                    <outlet property="isVideoImageView" destination="OZu-qM-zqU" id="iQM-2m-JhS"/>
+                                    <outlet property="titleLabel" destination="JDr-l6-tfD" id="ext-dG-SKe"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -157,7 +233,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXp-oD-w8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="-237"/>
+            <point key="canvasLocation" x="2537.68115942029" y="-237.05357142857142"/>
         </scene>
         <!--Nearby View Controller-->
         <scene sceneID="MOy-Pz-4fa">
@@ -769,8 +845,10 @@
         <image name="number.circle.fill" catalog="system" width="128" height="121"/>
         <image name="paperplane.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="main">
             <color red="0.92900002002716064" green="0.34099999070167542" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

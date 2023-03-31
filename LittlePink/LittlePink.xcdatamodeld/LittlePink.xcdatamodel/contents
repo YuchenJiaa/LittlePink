@@ -3,6 +3,7 @@
     <entity name="DraftNote" representedClassName="DraftNote" syncable="YES" codeGenerationType="class">
         <attribute name="channel" attributeType="String" defaultValueString=""/>
         <attribute name="coverPhoto" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="isVideo" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="photos" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="subChannel" attributeType="String" defaultValueString=""/>
         <attribute name="text" attributeType="String" defaultValueString=""/>
@@ -11,6 +12,6 @@
         <attribute name="video" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
     </entity>
     <elements>
-        <element name="DraftNote" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="DraftNote" positionX="-63" positionY="-18" width="128" height="164"/>
     </elements>
 </model>

@@ -14,4 +14,5 @@ target 'LittlePink' do
     pod 'KMPlaceholderTextView', '~> 1.4.0'
     pod 'GoogleMaps', '7.4.0'
     pod 'GooglePlaces', '7.4.0'
+    pod 'DateToolsSwift'
 end

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DateToolsSwift
 
 extension String{
     var isBlank: Bool{ self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
@@ -15,8 +16,38 @@ extension Optional where Wrapped == String{
     var unwrappedText: String{self ?? ""}
 }
 
+extension Date{
+    var formattedDate: String{
+        let currentYear = Date().year
+        if year == currentYear{
+            if isToday{
+                if minutesAgo > 10{
+                    return "Today \(format(with: "HH:mm"))"
+                }else{
+                    return timeAgoSinceNow
+                }
+            }else if isYesterday{
+                return "Yesterday \(format(with: "HH:mm"))"
+            }else{
+                return format(with: "MM-dd")
+            }
+        }else if year < currentYear{
+            return format(with: "yyyy-MM-dd")
+        }else{
+            return "Future time is not allowed"
+        }
+    }
+}
+
 extension UIImage{
     
+    convenience init?(_ data: Data?) {
+        if let unwrappedData = data{
+            self.init(data: unwrappedData)
+        }else{
+            return nil
+        }
+    }
     enum JPEGQuality: CGFloat {
         case lowest  = 0
         case low     = 0.25

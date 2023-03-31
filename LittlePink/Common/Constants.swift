@@ -13,18 +13,22 @@ let kNearbyVCID = "NearbyViewControllerID"
 let kDiscoverVCID = "DiscoverViewControllerID"
 let kWaterfallVCID = "WaterfallVCID"
 let kNoteEditVCID = "NoteEditVCID"
-let kPhotoCellID = "PhotoCellID"
 let kPhotoFooterID = "PhotoFooterID"
 let kChannelTableVCID = "ChannelTableVCID"
-let kSubChannelCellID = "SubChannelCellID"
+
 
 //MARK: - Accets
 let mainColor = UIColor(named: "main")!
 let blueColor = UIColor(named: "blue")!
-
+let imagePH = UIImage(named: "imagePH")!
 
 //MARK: CellID
 let kWaterfallCellID = "WaterfallCellID"
+let kPhotoCellID = "PhotoCellID"
+let kSubChannelCellID = "SubChannelCellID"
+let kdraftNoteWaterfallCellID = "DraftNoteWaterfallCellID"
+
+
 let kWaterfallPadding: CGFloat = 4
 let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fitness","Food","Pet"]
 
