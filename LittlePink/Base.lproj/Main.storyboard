@@ -155,7 +155,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="326" height="534"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-Wm-j1r">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-Wm-j1r">
                                             <rect key="frame" x="0.0" y="0.0" width="326" height="448.5"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HTy-bP-QBB">
@@ -199,16 +199,21 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Wsf-Wm-j1r" firstAttribute="top" secondItem="3Db-Dg-SPK" secondAttribute="top" id="5gm-8r-ZJE"/>
                                         <constraint firstItem="HTy-bP-QBB" firstAttribute="top" secondItem="Wsf-Wm-j1r" secondAttribute="bottom" constant="16" id="9dE-TO-a21"/>
                                         <constraint firstAttribute="trailing" secondItem="HTy-bP-QBB" secondAttribute="trailing" constant="16" id="Fbv-We-CHN"/>
                                         <constraint firstAttribute="trailing" secondItem="Wsf-Wm-j1r" secondAttribute="trailing" id="K5Y-iZ-E9J"/>
                                         <constraint firstItem="OZu-qM-zqU" firstAttribute="top" secondItem="3Db-Dg-SPK" secondAttribute="top" constant="16" id="YUT-Ih-gMj"/>
                                         <constraint firstItem="Wsf-Wm-j1r" firstAttribute="leading" secondItem="3Db-Dg-SPK" secondAttribute="leading" id="Z45-yK-sbm"/>
                                         <constraint firstAttribute="bottom" secondItem="HTy-bP-QBB" secondAttribute="bottom" constant="16" id="c0J-1x-w0P"/>
-                                        <constraint firstItem="Wsf-Wm-j1r" firstAttribute="top" secondItem="3Db-Dg-SPK" secondAttribute="top" id="j9U-m6-5RZ"/>
                                         <constraint firstItem="HTy-bP-QBB" firstAttribute="leading" secondItem="3Db-Dg-SPK" secondAttribute="leading" constant="16" id="pn3-nH-Ogm"/>
                                         <constraint firstAttribute="trailing" secondItem="OZu-qM-zqU" secondAttribute="trailing" constant="16" id="wHs-dP-eUj"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="326" height="534"/>
                                 <userDefinedRuntimeAttributes>

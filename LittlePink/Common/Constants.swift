@@ -26,6 +26,9 @@ let imagePH = UIImage(named: "imagePH")!
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let context = appDelegate.persistentContainer.viewContext
 
+//MARK: - UI
+let screenRect = UIScreen.main.bounds
+
 //MARK: - CellID
 let kWaterfallCellID = "WaterfallCellID"
 let kPhotoCellID = "PhotoCellID"
@@ -34,6 +37,7 @@ let kdraftNoteWaterfallCellID = "DraftNoteWaterfallCellID"
 
 
 let kWaterfallPadding: CGFloat = 4
+let kDraftNoteWaterfallCellBottomViewH: CGFloat = 84
 let kChannels = ["Recommendation","Travel","Entertainment","Skill","Beauty","Fitness","Food","Pet"]
 
 //MARK: - YPImagePicker
