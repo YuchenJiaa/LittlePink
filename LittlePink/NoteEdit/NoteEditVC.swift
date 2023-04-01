@@ -42,7 +42,7 @@ class NoteEditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
-        
+        setUI()
     }
     
     @IBAction func TFEditBegin(_ sender: Any) {
@@ -73,10 +73,7 @@ class NoteEditVC: UIViewController {
     }
     //using coreDate save data
     @IBAction func saveDraftNote(_ sender: Any) {
-        guard textViewIAView.currentTextCount <= kMaxNoteTextCount else{
-            showTexHUD("Up to \(kMaxNoteTextCount) characters are allowed")
-            return
-        }
+        validateNote()
         
         let draftNote = DraftNote(context: context)
         if isVideo{
@@ -103,6 +100,7 @@ class NoteEditVC: UIViewController {
     }
     
     @IBAction func ShareNote(_ sender: Any) {
+        validateNote()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -147,10 +145,7 @@ extension NoteEditVC: ChannelVCDelegate{
         self.channel = channel
         self.subChannel = subChannel
         //UI
-        channelLabel.text = subChannel
-        channelIcon.tintColor = blueColor
-        channelLabel.textColor = blueColor
-        channelPlaceholderLabel.isHidden = true
+        updateChannelUI()
         
     }
 }
