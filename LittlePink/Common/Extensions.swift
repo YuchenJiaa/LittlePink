@@ -117,3 +117,43 @@ extension Bundle{
         fatalError("Failed to load \(type) view")
     }
 }
+
+extension FileManager{
+    //Appending a path component to a URL is commonly done using 'appendingPathComponent', while for a path, it can be done by simply concatenating or interpolating the strings
+    func save(_ data: Data?, to dirName: String, as fileName: String) -> URL?{
+        guard let data = data else {
+            //print("the input data is nil")
+            return nil
+        }
+        
+        //1.path transfer URL,URL transfer path
+        //2.need to specify a URL first when creating folders and files
+        //3.use 'fileExists' to check whether a folder or file already exists before creating a new one
+        
+        //create dirctory
+        //"file:///xx/xx/tmp/dirName"
+        //Also can use temporaryDirectory to instead of fileURLWithPath: NSTemporaryDirectory()
+        let dirURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(dirName, isDirectory: true)
+        
+        if !fileExists(atPath: dirURL.path){
+            guard let _ = try? createDirectory(at: dirURL, withIntermediateDirectories: true) else {
+                print("Failed to create a directory")
+                return nil
+            }
+        }
+        
+        //Write to file
+        //"file:///xx/xx/tmp/dirName/fileName"
+        let fileURL = dirURL.appendingPathComponent(fileName)
+        
+        if !fileExists(atPath: fileURL.path){
+            guard let _ = try? data.write(to: fileURL) else {
+                print("Failded to write to a file")
+                return nil
+            }
+        }
+        
+        return fileURL
+    }
+}
+

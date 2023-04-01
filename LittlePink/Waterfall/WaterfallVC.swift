@@ -19,6 +19,8 @@ class WaterfallVC: UICollectionViewController {
         super.viewDidLoad()
         config()
         getDraftNotes()
+        print(NSHomeDirectory())
+        FileManager.default.save(UIImage(named: "1")?.pngData(), to: "testDir", as: "testFile")
     }
 
 }
