@@ -57,48 +57,17 @@ class NoteEditVC: UIViewController {
     @IBAction func TFEndOnExit(_ sender: Any) {
     }
     
-    @IBAction func TFEditChanged(_ sender: Any) {
-        if titleTextField.unwrappedText.count > kMaxNoteTitleCount{
-            
-            titleTextField.text = String(titleTextField.unwrappedText.prefix(kMaxNoteTitleCount))
-            
-            showTexHUD("Up to \(kMaxNoteTitleCount) characters are allowed")
-            
-            DispatchQueue.main.async {
-                let end = self.titleTextField.endOfDocument
-                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
-            }
-        }
-        titleCountLabel.text = "\(kMaxNoteTitleCount - titleTextField.unwrappedText.count)"
-    }
+    @IBAction func TFEditChanged(_ sender: Any) {handleTFEditChanged()}
     //using coreDate save data
     @IBAction func saveDraftNote(_ sender: Any) {
         validateNote()
-        
-        let draftNote = DraftNote(context: context)
-        if isVideo{
-            draftNote.video = try? Data(contentsOf: videoURL!)
+        if let draftNote = draftNote{
+            updateDraftNote(draftNote)
+        }else{
+            createDraftNote()
         }
-        draftNote.coverPhoto = photos[0].jpeg(.high)
-        //Encoder不能对UIImage编码，所以要先循环，把每个都变成Data类型再append进一个新数组，对这个新数组进行编码
-        var photos: [Data] = []
-        for photo in self.photos{
-            if let pngData = photo.pngData(){
-                photos.append(pngData)
-            }
-        }
-        draftNote.photos = try? JSONEncoder().encode(photos)
-        
-        draftNote.isVideo = isVideo
-        draftNote.title = titleTextField.exactText
-        draftNote.text = textView.exactText
-        draftNote.channel = channel
-        draftNote.subChannel = subChannel
-        draftNote.updatedAt = Date()
-        
-        appDelegate.saveContext()
     }
-    
+        
     @IBAction func ShareNote(_ sender: Any) {
         validateNote()
     }

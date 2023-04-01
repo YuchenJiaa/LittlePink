@@ -7,8 +7,11 @@
 
 extension NoteEditVC{
     func setUI(){
-        
+        setDraftNoteEditUI()
     }
+}
+
+extension NoteEditVC{
     private func setDraftNoteEditUI(){
         if let draftNote = draftNote{
             titleTextField.text = draftNote.title
@@ -16,7 +19,7 @@ extension NoteEditVC{
             channel = draftNote.channel!
             subChannel = draftNote.subChannel!
             if !subChannel.isEmpty{updateChannelUI()}
-        }       
+        }
         
     }
     func updateChannelUI(){

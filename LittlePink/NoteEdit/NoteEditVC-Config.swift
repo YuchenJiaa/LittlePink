@@ -5,7 +5,6 @@
 //  Created by 贾贾 on 2023/3/27.
 //
 
-import Foundation
 
 extension NoteEditVC{
     func config(){
