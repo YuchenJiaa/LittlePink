@@ -22,6 +22,8 @@ extension NoteEditVC{
             handlePhoto(draftNote)
         }
         handleOthers(draftNote)
+        updateDraftNoteFinished?()
+        navigationController?.popViewController(animated: true)
     }
 }
 

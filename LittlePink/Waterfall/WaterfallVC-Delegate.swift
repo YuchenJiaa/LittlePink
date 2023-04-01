@@ -19,7 +19,10 @@ extension WaterfallVC{
                 vc.draftNote = draftNote
                 vc.photos = photos
                 vc.videoURL = videoURL
-                
+                vc.updateDraftNoteFinished = {
+                    self.getDraftNotes()
+                    self.collectionView.reloadData()
+                }
                 navigationController?.pushViewController(vc, animated: true)
             }else{
                 showTexHUD("Failed to load draft note")
