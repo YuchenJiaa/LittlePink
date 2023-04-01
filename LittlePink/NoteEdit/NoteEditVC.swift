@@ -10,6 +10,8 @@ import UIKit
 
 class NoteEditVC: UIViewController {
     
+    var draftNote: DraftNote?
+    
     var photos = [
         UIImage(named: "1")!, UIImage(named: "2")!
     ]

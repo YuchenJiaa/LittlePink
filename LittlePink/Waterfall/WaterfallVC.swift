@@ -20,7 +20,7 @@ class WaterfallVC: UICollectionViewController {
         config()
         getDraftNotes()
         print(NSHomeDirectory())
-        FileManager.default.save(UIImage(named: "1")?.pngData(), to: "testDir", as: "testFile")
+        //FileManager.default.save(UIImage(named: "1")?.pngData(), to: "testDir", as: "testFile")
     }
 
 }
