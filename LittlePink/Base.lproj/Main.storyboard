@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="2537.68115942029" y="-237.05357142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--MeVC-->
         <scene sceneID="VkS-Ri-EQp">
             <objects>
-                <viewController id="UEz-1J-JiC" sceneMemberID="viewController">
+                <viewController id="UEz-1J-JiC" customClass="MeVC" customModule="LittlePink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWF-ib-YJC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

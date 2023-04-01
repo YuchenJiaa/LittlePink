@@ -21,6 +21,7 @@
 		0C67B02629D8CE290053A0DD /* NoteEditVC-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67B02529D8CE290053A0DD /* NoteEditVC-Helper.swift */; };
 		0C67B02829D8CF440053A0DD /* NoteEditVC-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67B02729D8CF440053A0DD /* NoteEditVC-UI.swift */; };
 		0C67B02A29D8D78E0053A0DD /* NoteEditVC-DraftNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67B02929D8D78E0053A0DD /* NoteEditVC-DraftNote.swift */; };
+		0C67B02E29D8F11E0053A0DD /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67B02D29D8F11E0053A0DD /* MeVC.swift */; };
 		0C6D536F29CBAE2300B64000 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D536E29CBAE2300B64000 /* TabBarC.swift */; };
 		0C6D537129CBB10F00B64000 /* ShareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537029CBB10F00B64000 /* ShareVC.swift */; };
 		0C6D537429CCFF7E00B64000 /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D537329CCFF7E00B64000 /* NoteEditVC.swift */; };
@@ -63,6 +64,7 @@
 		0C67B02529D8CE290053A0DD /* NoteEditVC-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Helper.swift"; sourceTree = "<group>"; };
 		0C67B02729D8CF440053A0DD /* NoteEditVC-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-UI.swift"; sourceTree = "<group>"; };
 		0C67B02929D8D78E0053A0DD /* NoteEditVC-DraftNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DraftNote.swift"; sourceTree = "<group>"; };
+		0C67B02D29D8F11E0053A0DD /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		0C6D536E29CBAE2300B64000 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
 		0C6D537029CBB10F00B64000 /* ShareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShareVC.swift; path = /Users/jiajia/Desktop/LittlePinkProject/LittlePink/LittlePink/ShareVC.swift; sourceTree = "<absolute>"; };
 		0C6D537329CCFF7E00B64000 /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				0C3D1E9129C8CAC3008210DE /* Main.storyboard */,
 				0C6D536E29CBAE2300B64000 /* TabBarC.swift */,
 				0C6D537029CBB10F00B64000 /* ShareVC.swift */,
+				0C67B02D29D8F11E0053A0DD /* MeVC.swift */,
 				0C6D537D29CD594D00B64000 /* NoteEdit */,
 				0C81C3B729C95AD100FC8DFA /* Home */,
 				0C81C3BD29CB915A00FC8DFA /* Waterfall */,
@@ -366,6 +369,7 @@
 				0C48B2BD29D76FC30068B2CE /* WaterfallVC-Config.swift in Sources */,
 				0C3D1E8E29C8CAC3008210DE /* SceneDelegate.swift in Sources */,
 				0C81C3B429C955C100FC8DFA /* NearbyViewController.swift in Sources */,
+				0C67B02E29D8F11E0053A0DD /* MeVC.swift in Sources */,
 				0C6D537429CCFF7E00B64000 /* NoteEditVC.swift in Sources */,
 				0C81C3B029C9556500FC8DFA /* FollowViewController.swift in Sources */,
 				0CE3450229D26B80004B0C71 /* ChannelVC.swift in Sources */,
