@@ -20,6 +20,7 @@ extension NoteEditVC{
                 self.showTexHUD("Draft note saved successfully")
             }
         }
+        dismiss(animated: true)
     }
     
     func updateDraftNote(_ draftNote: DraftNote){

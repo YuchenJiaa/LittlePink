@@ -45,19 +45,29 @@ class TabBarC: UITabBarController, UITabBarControllerDelegate {
             let picker = YPImagePicker(configuration: config)
 
             picker.didFinishPicking { [unowned picker] items, cancelled in
-                    if cancelled{
-                       print("User tap cancel button")
+                if cancelled{
+                    picker.dismiss(animated: true)
+                }else{
+                    var photos: [UIImage] = []
+                    var videoURL: URL?
+                    
+                    for item in items {
+                        switch item {
+                        case let .photo(photo):
+                            print(photo)
+                            photos.append(photo.image)
+                        case .video(let video):
+                            print(video)
+                            photos.append(video.thumbnail)
+                            videoURL = video.url
+                        }
                     }
-                
-                for item in items{
-                    switch item {
-                    case let .photo(photo):
-                        print(photo)
-                    case .video(let video):
-                        print(video)
-                    }
+                    
+                    let vc = self.storyboard!.instantiateViewController(identifier: kNoteEditVCID) as! NoteEditVC
+                    vc.photos = photos
+                    vc.videoURL = videoURL
+                    picker.pushViewController(vc, animated: true)
                 }
-                picker.dismiss(animated: true)
             }
             present(picker, animated: true)
             
