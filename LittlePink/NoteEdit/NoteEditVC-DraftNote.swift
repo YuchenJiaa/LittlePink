@@ -7,22 +7,34 @@
 
 extension NoteEditVC{
     func createDraftNote(){
-        let draftNote = DraftNote(context: context)
-        if isVideo{
-            draftNote.video = try? Data(contentsOf: videoURL!)
-        }
-        handlePhoto(draftNote)
+        backgroundContext.perform {
+            let draftNote = DraftNote(context: backgroundContext)
+            if self.isVideo{
+                draftNote.video = try? Data(contentsOf: self.videoURL!)
+            }
+            self.handlePhoto(draftNote)
         
-        draftNote.isVideo = isVideo
-        handleOthers(draftNote)
+            draftNote.isVideo = self.isVideo
+            self.handleOthers(draftNote)
+            DispatchQueue.main.async {
+                self.showTexHUD("Draft note saved successfully")
+            }
+        }
     }
     
     func updateDraftNote(_ draftNote: DraftNote){
-        if !isVideo{
-            handlePhoto(draftNote)
+        backgroundContext.perform {
+            if !self.isVideo{
+                self.handlePhoto(draftNote)
+            }
+            self.handleOthers(draftNote)
+            
+            DispatchQueue.main.async {
+                self.updateDraftNoteFinished?()
+                //self.showTexHUD("Draft note updated successfully")
+            }
         }
-        handleOthers(draftNote)
-        updateDraftNoteFinished?()
+        
         navigationController?.popViewController(animated: true)
     }
 }
@@ -41,12 +53,14 @@ extension NoteEditVC{
     }
     
     private func handleOthers(_ draftNote: DraftNote){
-        draftNote.title = titleTextField.exactText
-        draftNote.text = textView.exactText
+        DispatchQueue.main.async {
+            draftNote.title = self.titleTextField.exactText
+            draftNote.text = self.textView.exactText
+        }
         draftNote.channel = channel
         draftNote.subChannel = subChannel
         draftNote.updatedAt = Date()
         
-        appDelegate.saveContext()
+        appDelegate.saveBackgroundContext()
     }
 }

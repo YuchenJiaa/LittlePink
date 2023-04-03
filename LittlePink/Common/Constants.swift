@@ -22,9 +22,11 @@ let mainColor = UIColor(named: "main")!
 let blueColor = UIColor(named: "blue")!
 let imagePH = UIImage(named: "imagePH")!
 
-//MARK: - coreDAta
+//MARK: - coreData
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let context = appDelegate.persistentContainer.viewContext
+let persistentContainer = appDelegate.persistentContainer
+let context = persistentContainer.viewContext
+let backgroundContext = persistentContainer.newBackgroundContext()
 
 //MARK: - UI
 let screenRect = UIScreen.main.bounds

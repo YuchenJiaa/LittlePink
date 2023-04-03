@@ -15,7 +15,18 @@ extension WaterfallVC{
         request.sortDescriptors = [sortDescriptor]
         //To improve the perfomance
         request.propertiesToFetch = ["coverPhoto", "title", "updatedAt", "isVideo"]
-        let draftNotes = try! context.fetch(request)
-        self.draftNotes = draftNotes
+        
+        showLoadHUD()
+        backgroundContext.perform {
+            if let draftNotes = try? backgroundContext.fetch(request){
+                self.draftNotes = draftNotes
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+            self.hideLoadHUD()
+        }
+       
+        
     }
 }

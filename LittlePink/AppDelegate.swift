@@ -77,6 +77,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    //Storing context on a concurrent queue
+    func saveBackgroundContext(){
+        //Since there can be multiple contexts on concurrent queues, a new one is created every time 'persistentContainer.viewContext' is called. Therefore, it cannot be done as mentioned above.
+        //Here need to use the context on the same concurrent queue (the one referenced in the constant file)
+        if backgroundContext.hasChanges{
+            do {
+                try backgroundContext.save()
+            } catch {
+                fatalError("Failed to store data in the background(CRUD):\(error)")
+            }
+        }
+    }
 
 }
 
